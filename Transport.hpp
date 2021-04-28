@@ -16,6 +16,7 @@ namespace joby
     class Transport
     {
     public:
+        virtual ~Transport() = default;
         virtual TransportState Update(double delta_time_seconds);
 
         virtual void AddTime(double delta_time_seconds) = 0;
@@ -60,7 +61,6 @@ namespace joby
                   float energy_use_cruising_khw_per_mile,
                   int max_passenger_count,
                   float fault_probability_per_hour);
-        virtual ~Transport() = default;
     private:
         static int sNumCreated;
     
