@@ -34,7 +34,6 @@ int main()
         double frame_time_seconds = 0.0001;
         const double TIME_SCALE = 60.0;
 
-        bool is_running = true;
         timer.StartTimer();
         while (timer.IsRunning())
         {
